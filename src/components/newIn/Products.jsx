@@ -11,7 +11,7 @@ function Products(props) {
                 <h2 className="text-lg font-extralight " >{props.price}</h2>
                 <h3 className="text-md text-gray-400 line-through " >{props.oldPrice}</h3>
             </div>
-            <button className="group-hover:bg-yellow-400  bg-white p-3 rounded-md  text-center w-[5rem] lg:w-[6rem] h-[3.5rem] " >
+            <button id="buybtn" className="group-hover:bg-yellow-400  bg-white p-3 rounded-md  text-center w-[5rem] lg:w-[6rem] h-[3.5rem] " >
                     <h2 className="group-hover:text-white text-black text-center  text-sm lg:text-md font-semibold " >Add to Cart</h2>
                 </button>
             </div>     

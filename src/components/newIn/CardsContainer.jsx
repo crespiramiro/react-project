@@ -15,7 +15,7 @@ function CardsContainer() {
                 <Products  img='products/coat.jpg' product='Coat' price='$3280,99' oldPrice='3650'     />
                 <Products  img='products/shoes.jpg' product='Boots' price='$690,99' oldPrice='980'     />
                 <Products  img='products/bag.jpg' product='Bag' price='$690' oldPrice='1099,99'     />
-                <Products  img='products/jeans.jpg' product='Pants' price='$890' oldPrice='1200'     />
+                <Products  img='products/jeans.jpg' product='Jeans' price='$890' oldPrice='1200'     />
             </div>
         </section>
      );
