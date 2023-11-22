@@ -15,6 +15,7 @@ function Navbar() {
         setNav(!nav)
     }
 
+
     return ( 
         <nav className={`w-full h-auto flex flex-row justify-between lg:flex-row lg:justify-between items-center   px-4 lg:px-10 lg:py-3 pt-4 ${orbitron.className} ` }>
             <div className="img-container">
@@ -33,6 +34,8 @@ function Navbar() {
                 <div className='block lg:hidden text-3xl ' onClick={handleNav}  >
                     {nav ? <AiOutlineClose/>: <AiOutlineMenu/> }
                 </div>
+           
+            
 
                 <nav className={nav ? ' z-50 fixed flex-col gap-y-6 p-6 left-0 top-0  w-[82%] h-full border-r-2 border-yellow-400 bg-white ease-in-out duration-500 ' : ' hidden fixed left-[-100%]' } >
                     <h2 className=' text-4xl font-extrabold' > Avant Studios </h2>
