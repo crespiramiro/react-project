@@ -14,7 +14,7 @@ function Slider() {
         }
 
     return ( 
-        <section className="mt-3 mb-3" > 
+        <section id="gallery" className="mt-3 mb-3" > 
             <h2 className=" p-3 text-center text-xl lg:text-4xl font-bold " ><span className="underline text-yellow-400 cursor-pointer ">@AvantStudios</span> on Instagram</h2>
         <div className=" w-full h-full relative flex items-center ">
             <MdChevronLeft className="opacity-50 cursor-pointer hover:opacity-100 " onClick={slideLeft} size={40} />
