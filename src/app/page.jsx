@@ -12,7 +12,7 @@ import NewProducts from '@/components/NewProducts'
 
 export default function Home() {
   return (
-   <section className=' h-screen w-full overflow-x-hidden scroll-smooth ' >
+   <section className=' min-h-screen max-h-screen w-full overflow-x-hidden scroll-smooth ' >
     <Navar />
     <HeroImg />
     <NewProducts />
