@@ -6,7 +6,6 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { AiOutlineMenu } from 'react-icons/ai'
 import { Orbitron } from "next/font/google";
 const orbitron = Orbitron({ subsets: ['latin'] })
-import Link from 'next/link';
 
  
 function Navbar() {
