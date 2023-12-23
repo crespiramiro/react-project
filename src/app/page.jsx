@@ -12,6 +12,7 @@ import NewProducts from '@/components/NewProducts'
 
 export default function Home() {
   return (
+
    <section className='overflow-x-hidden min-h-screen max-h-screen scroll-smooth ' >
     <Navar />
     <HeroImg />

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Link from 'next/link';
 import { AiOutlineClose, AiOutlineUser } from 'react-icons/ai';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
@@ -54,7 +55,7 @@ function Navbar() {
                 <nav className={nav ? ' z-50 fixed flex-col gap-y-6 p-6 left-0 top-0  w-[82%] h-full border-r-2 border-yellow-400 bg-white ease-in-out duration-500 ' : ' hidden fixed left-[-100%]' } >
                     <h2 className=' text-4xl font-extrabold' > Avant Studios </h2>
                     <ul className='uppercase pt-4 mt-2 ' >
-                        <li className='py-6 text-2xl ' ><Link href='#home' >Home</Link></li>
+                        <li className='py-6 text-2xl ' ><Link href='#home'>Home</Link></li>
                         <li className='py-6 text-2xl ' ><Link href='#about' >About Us</Link></li>
                         <li className='py-6 text-2xl ' ><Link href='#gallery' >Gallery</Link></li>
                     </ul>
