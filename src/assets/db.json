@@ -1,0 +1,74 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "product": "Denim Jacket",
+            "price":
+             "$1899,99",
+            "oldprice": "$2480,99",
+            "img": "products/jacket.webp"
+        },
+        {
+            "id": 2,
+            "product": "Long Coat",
+            "price":
+             "$2800",
+            "oldprice": "$3455",
+            "img": "products/longcoat2.webp"
+        },
+        { "id": 3,
+        "product": "Sunglasses",
+        "price":
+         "$570,99",
+        "oldprice": "$899,99",
+        "img": "products/sunglasses.webp"},
+        {
+            "id": 4,
+            "product": "Fur Jacket",
+            "price":
+             "$2720,99",
+            "oldprice": "$3040",
+            "img": "products/denim-jacket.webp"
+        },
+        {
+            "id": 5,
+            "product": "Flared Pants",
+            "price":
+             "$1549,99",
+            "oldprice": "$2120",
+            "img": "products/pants.webp"
+        },
+        {
+            "id": 6,
+            "product": "Coat",
+            "price":
+             "$3280,99",
+            "oldprice": "$3650",
+            "img": "products/coat.webp"
+        },
+        {
+            "id": 7,
+            "product": "Boots",
+            "price":
+             "$690,99",
+            "oldprice": "$980",
+            "img": "products/shoes.webp"
+        },
+        {
+            "id": 8,
+            "product": "Bag",
+            "price":
+             "$690",
+            "oldprice": "$980,99",
+            "img": "products/bag.webp"
+        },
+        {
+            "id": 9,
+            "product": "Jeans",
+            "price":
+             "$890",
+            "oldprice": "$1200",
+            "img": "products/jeans.webp"
+        }
+    ]
+}
