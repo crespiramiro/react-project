@@ -5,6 +5,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { AiOutlineMenu } from 'react-icons/ai'
 import { Orbitron } from "next/font/google";
+import ShoppingCart from '../cart/ShoppingCart';
 const orbitron = Orbitron({ subsets: ['latin'] })
 
  
@@ -17,10 +18,10 @@ function Navbar() {
         setCart(false)
     }
 
-    const [cart, setCart] = useState(false)
+    const [cartState, setCart] = useState(false)
 
     const handleCart = () => {
-        setCart(!cart)
+        setCart(!cartState)
         setNav(false)
     }
 
@@ -42,12 +43,8 @@ function Navbar() {
                 <div className='block lg:hidden text-3xl ' onClick={handleNav}  >
                     {nav ? <AiOutlineClose/>: <AiOutlineMenu/> }
                 </div>
-                <div className={ cart  ? 'z-50 fixed flex-col gap-y-6  right-0 top-0  w-[42%] h-full border-l-2 border-yellow-400 bg-white ease-in-out duration-500' : 'hidden fixed left-[-100%] '} >
-                    <div className="title flex flex-row justify-between h-auto p-6 w-full bg-slate-700 text-white ">
-                        <h2 className='font-semibold text-xl lg:text-3xl ' >Shopping Cart</h2>
-                        <AiOutlineClose cursor={'pointer'} size={40}  onClick={handleCart} />
-                    </div>
-                </div>
+                
+                <ShoppingCart cartState={cartState} handleCart={handleCart} />
 
 
 
