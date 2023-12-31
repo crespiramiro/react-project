@@ -8,12 +8,14 @@ import Slider from '@/components/gallery/Slider'
 import WorkspaceSection from '@/components/About/WorkspaceSection'
 import Footer from '@/components/footer/Footer'
 import NewProducts from '@/components/products/NewProducts'
+import { ShoppingCartProvider } from '@/components/cart/CartContext'
 
 
 export default function Home() {
   return (
 
    <section className='overflow-x-hidden min-h-screen max-h-screen scroll-smooth ' >
+    <ShoppingCartProvider >
     <Navar />
     <HeroImg />
     <NewProducts />
@@ -23,6 +25,7 @@ export default function Home() {
     <Slider />
     <Banner2 />
     <Footer />
+    </ShoppingCartProvider>
    </section>
   )
 }
