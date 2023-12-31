@@ -70,5 +70,6 @@
             "oldprice": "$1200",
             "img": "products/jeans.webp"
         }
-    ]
+    ],
+    "cart": []
 }
