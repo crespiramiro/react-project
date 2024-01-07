@@ -1,39 +1,40 @@
-import { useReducer, useContext, createContext } from "react";
-import { shoppingReducer, shoppingInitialState } from "@/reducer/Reducer";
-import { TYPES } from "@/actions/actions";
+import { useReducer, createContext } from 'react'
+import { cartReducer, cartInitialState } from '@/reducer/Reducer'
 
-const ShoppingCartContext = createContext();
+export const CartContext = createContext()
 
-export const useShoppingCart = () => {
-  const context = useContext(ShoppingCartContext);
-  if (!context) {
-    throw new Error('useShoppingCart debe usarse dentro de un ShoppingCartProvider');
-  }
-  return context;
-};
+function useCartReducer () {
+  const [state, dispatch] = useReducer(cartReducer, cartInitialState)
 
-export const ShoppingCartProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
+  const addToCart = product => dispatch({
+    type: 'ADD_TO_CART',
+    payload: product
+  })
 
-  const addToCart = (id) => {
-    dispatch({ type: TYPES.AGREGAR_AL_CARRITO, payload: id });
-  };
+  const removeFromCart = product => dispatch({
+    type: 'REMOVE_FROM_CART',
+    payload: product
+  })
 
-  const deleteFromCart = (id, all = false) => {
-    if (all) {
-      dispatch({ type: TYPES.REMOVER_TODOS, payload: id });
-    } else {
-      dispatch({ type: TYPES.REMOVER_UN_PRODUCTO, payload: id });
-    }
-  };
+  const clearCart = () => dispatch({ type: 'CLEAR_CART' })
 
-  const clearCart = () => {
-    dispatch({ type: TYPES.VACIAR_CARRITO });
-  };
+  return { state, addToCart, removeFromCart, clearCart }
+}
+
+// la dependencia de usar React Context
+// es MÍNIMA
+export function CartProvider ({ children }) {
+  const { state, addToCart, removeFromCart, clearCart } = useCartReducer()
 
   return (
-    <ShoppingCartContext.Provider value={{ state, addToCart, deleteFromCart, clearCart }}>
+    <CartContext.Provider value={{
+      cart: state,
+      addToCart,
+      removeFromCart,
+      clearCart
+    }}
+    >
       {children}
-    </ShoppingCartContext.Provider>
-  );
-};
+    </CartContext.Provider>
+  )
+}

@@ -1,15 +1,15 @@
 "use client";
-import { useShoppingCart } from "../cart/CartContext";
 import { Orbitron } from "next/font/google";
 const orbitron = Orbitron({ subsets: ["latin"] });
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Product from "./Product";
+import { useCart } from "../cart/UseCart";
 
 export default function NewProducts({}) {
   const [productos, setProductos] = useState([]);
-  const { addToCart } = useShoppingCart();
   
+  const {addToCart} = useCart()
 
   const getData = async () => {
     const res = await axios.get("http://localhost:5050/productos");
@@ -29,9 +29,9 @@ export default function NewProducts({}) {
       >
         New in
       </h2>
-      <div className="w-full h-full grid grid-flow-row grid-cols-1  md:grid-cols-2 sm:gap-y-3 sm:gap-x-2 gap-x-8 gap-y-2 lg:grid-cols-3 ">
+      <div className="w-full h-full grid grid-flow-row grid-cols-1 transition-all ease-in-out duration-300 md:grid-cols-2 sm:gap-y-3 sm:gap-x-2 gap-x-8 gap-y-2 lg:grid-cols-3 ">
         {productos.map((producto) => (
-         <Product key={producto.id} producto={producto} />
+         <Product key={producto.id} producto={producto} addToCart={addToCart} />
         ))}
       </div>
     </section>

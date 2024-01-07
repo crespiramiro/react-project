@@ -1,17 +1,15 @@
-const CartItem = ({data, deleteFromCart}) => {
+const CartItem = ({producto, removeFromCart}) => {
 
-    let {id, name, price, quantity} = data;
+    let {product, img, price, quantity} = producto
 
     return (
         <div className="cart-item">
-            <h4>{name}</h4>
-            <h5>${price} x {quantity} = ${price * quantity}</h5>
-            <button onClick={() => deleteFromCart(id)}>Eliminar uno</button>
-
-            <button onClick={() => deleteFromCart(id, true)}>Eliminar todos</button>
-
+            <img src={img} alt={product} width={80} />
+            <h4>{product}</h4>
+            <h5>{price} x {quantity}</h5>
+            <button  onClick={()=>{removeFromCart(producto); console.log('Eliminando producto', producto);  }} >Eliminar Producto</button>
         </div>
-    )
+    );
 }
 
 export default CartItem

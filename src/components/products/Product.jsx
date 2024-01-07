@@ -1,9 +1,10 @@
 import { useShoppingCart } from "../cart/CartContext";
 import { Orbitron } from "next/font/google";
+import { useCart } from "../cart/UseCart";
 const orbitron = Orbitron({ subsets: ["latin"] });
 
 export default function Product({producto}){
-    const { addToCart } = useShoppingCart();    
+    const { addToCart } = useCart();    
 
     return (
 
@@ -24,7 +25,10 @@ className={`products h-auto  w-auto rounded-lg p-8 mx-12 my-2 group ${orbitron.c
     </h3>
   </div>
   <button
-   onClick={() => addToCart(producto.id)}
+  onClick={() => {
+    addToCart(producto);
+    console.log('Producto añadido al carrito:', producto,);
+  }}
     id="buybtn"
     className="group-hover:bg-yellow-400  bg-white p-3 rounded-md  text-center w-[5rem] lg:w-[6rem] h-[3.5rem] "
   >
