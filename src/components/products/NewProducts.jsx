@@ -25,7 +25,7 @@ export default function NewProducts({}) {
   return (
     <section id="products" className=" w-full h-auto md:mt-10 mt-6 mb-4 md:mb-8 mr-1 px-2 text-center  ">
       <h2
-        className={` uppercase text-4xl font-bold hover:text-gray-600 pt-8 text-yellow-400 mb-6 ${orbitron.className} `}
+        className={` uppercase text-4xl block font-bold hover:text-gray-600 pt-8 text-yellow-400 mb-6 ${orbitron.className} `}
       >
         New in
       </h2>

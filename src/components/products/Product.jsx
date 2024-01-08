@@ -1,4 +1,3 @@
-import { useShoppingCart } from "../cart/CartContext";
 import { Orbitron } from "next/font/google";
 import { useCart } from "../cart/UseCart";
 const orbitron = Orbitron({ subsets: ["latin"] });
@@ -11,7 +10,7 @@ export default function Product({producto}){
 <div 
 className={`products h-auto  w-auto rounded-lg p-8 mx-12 my-2 group ${orbitron.className} `}
 >
-<div className="mb-2 relative group-hover:scale-125 ">
+<div className="mb-2 relative group-hover:scale-110 transition-all ease-in-out duration-300 ">
   <img
     src={producto.img}
     alt="{producto.product}"
@@ -30,9 +29,9 @@ className={`products h-auto  w-auto rounded-lg p-8 mx-12 my-2 group ${orbitron.c
     console.log('Producto añadido al carrito:', producto,);
   }}
     id="buybtn"
-    className="group-hover:bg-yellow-400  bg-white p-3 rounded-md  text-center w-[5rem] lg:w-[6rem] h-[3.5rem] "
+    className="group-hover:bg-yellow-400  transition-all ease-in-out duration-150 bg-white p-3 rounded-md  text-center w-[5rem] lg:w-[6rem] h-[3.5rem] "
   >
-    <h2 className="group-hover:text-white text-black text-center  text-sm lg:text-md font-semibold ">
+    <h2 className="group-hover:text-white transition-all ease-in-out duration-150 text-black text-center  text-sm lg:text-md font-semibold ">
       Add to Cart
     </h2>
   </button>
