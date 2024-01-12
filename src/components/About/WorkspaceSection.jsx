@@ -8,7 +8,7 @@ function WorkspaceSection() {
                     <h2 className="text-2xl lg:text-4xl" >Elevate Your Style <span className="text-yellow-400" >at Home</span></h2>
                     <p className="" >Discover elegance in every detail with our exclusive collection of accessories from Future Studios. From exquisite jewelry to stylish scarves, each piece is designed to elevate your style, even while working from home.</p>
                     <p className="" >Interested in gifting these unique pieces to a group? Contact us to discuss personalized packages and options for exclusive messages.</p>
-                    <button className="bg-yellow-400 hover:shadow-2xl text- p-3 rounded-md " ><p>Buy Now</p></button>
+                    <button className="bg-yellow-400 hover:shadow-2xl text- p-3 rounded-md " ><p className="font-semibold" >Buy Now</p></button>
                 </div>
                 </div>      
     );
