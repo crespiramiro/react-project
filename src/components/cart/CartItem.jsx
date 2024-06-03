@@ -12,7 +12,7 @@ export function CartItem ({producto, removeFromCart}) {
             <h4 className="font-semibold" >{product}</h4>
            </div>
           <div className="flex flex-col gap-y-10 h-full justify-end " >
-            <button  className="text-center self-center flex " onClick={()=>{removeFromCart(producto); console.log('Eliminando producto', producto);  }} ><GoTrash size={35} /></button>
+            <button  className="text-center self-center flex hover:text-red-600 " onClick={()=>{removeFromCart(producto); console.log('Eliminando producto', producto);  }} ><GoTrash size={30} /></button>
           <h5>{price} x {quantity}</h5>
 
           </div>
