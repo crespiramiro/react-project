@@ -6,7 +6,7 @@ export function CartItem ({producto, removeFromCart}) {
 
 
     return (
-        <div className="cart-item flex flex-row justify-around items-center ">
+        <div className="cart-item flex flex-row justify-around items-center p-6 gap-x-4 ">
            <div className="flex flex-col gap-y-4 justify-center items-center h-auto " >
            <img src={img} alt={product} width={80} />
             <h4 className="font-semibold" >{product}</h4>

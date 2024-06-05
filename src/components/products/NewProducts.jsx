@@ -12,7 +12,7 @@ export default function NewProducts({}) {
   const {addToCart} = useCart()
 
   const getData = async () => {
-    const res = await axios.get("http://localhost:5050/productos");
+    const res = await axios.get("https://my-json-server.typicode.com/crespiramiro/avantp-api/productos");
     const products = await res.data;
     setProductos(res.data);
     console.log(products);
