@@ -1,11 +1,13 @@
 import { TYPES } from "@/actions/actions";
-export const cartInitialState = JSON.parse(window.localStorage.getItem('cart')) || []
 
-
+const isClient = typeof window !== 'undefined';
+export const cartInitialState = isClient ? JSON.parse(window.localStorage.getItem('cart')) || [] : [];
 
 // update localStorage with state for cart
 export const updateLocalStorage = state => {
-  window.localStorage.setItem('cart', JSON.stringify(state))
+  if (isClient) {
+    window.localStorage.setItem('cart', JSON.stringify(state));
+  }
 }
 
 const UPDATE_STATE_BY_ACTION = {
@@ -14,23 +16,6 @@ const UPDATE_STATE_BY_ACTION = {
     const productInCartIndex = state.findIndex(item => item.id === id)
 
     if (productInCartIndex >= 0) {
-      // 👀 una forma sería usando structuredClone
-      // const newState = structuredClone(state)
-      // newState[productInCartIndex].quantity += 1
-
-      // 👶 usando el map
-      // const newState = state.map(item => {
-      //   if (item.id === id) {
-      //     return {
-      //       ...item,
-      //       quantity: item.quantity + 1
-      //     }
-      //   }
-
-      //   return item
-      // })
-
-      // ⚡ usando el spread operator y slice
       const newState = [
         ...state.slice(0, productInCartIndex),
         { ...state[productInCartIndex], quantity: state[productInCartIndex].quantity + 1 },
