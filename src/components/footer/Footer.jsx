@@ -22,7 +22,7 @@ function Footer() {
                 <ul className=" text-sm md:text-xl flex flex-col gap-y-8 md:gap-y-4 pb-8 " >
                     <li className="font-semibold" >Collaborations and Designers</li>
                     <li>Our Collaboration with <span className="italic font-semibold " >Éclat Atelier</span></li>
-                    <li>all rights reserved, Ramiro Crespi, 2023</li>
+                    <li>Ramiro Crespi, 2023</li>
                   </ul>
            </div>
         </div>
